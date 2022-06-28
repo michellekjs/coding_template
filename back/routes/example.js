@@ -21,18 +21,20 @@ const student = new mongoose.Schema({name: String})
 //make new object using the student schema into 'newapple' collection
 const Student = mongoose.model('newapple', student)
 
-// collection_name.save
-const small = new Student({ name: 'mingyu' });
-small.save(function (err) {
-  if (err) return handleError(err);
-});
+
+router.get('/addexample', (req,res) => {
+  const small = new Student({ name: 'mingyu' });
+  small.save(function (err) {
+    if (err) return handleError(err);
+  });
+})
 
 
-// router.get('/example', (req,res) => {
-//   Student.find({}, function(err,student){ 
-//     console.log(student)
-//    });
 
-// })
+router.get('/showexample', (req,res) => {
+  Student.find({}, function(err,student){ 
+    console.log(student)
+   });
+})
 
 module.exports = router;

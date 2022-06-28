@@ -1,9 +1,6 @@
 const express = require('express')
 const app = express()
 const port = 9000
-const mongoose = require("mongoose");
-const MONGODB_URI = "mongodb://localhost:27017/local?readPreference=primary&ssl=false"
-
 const cors = require('cors')
 app.use(cors())
 
