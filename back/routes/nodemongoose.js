@@ -30,7 +30,6 @@ router.get('/addexample', (req,res) => {
 })
 
 
-
 router.get('/showexample', (req,res) => {
   Student.find({}, function(err,student){ 
     console.log(student)

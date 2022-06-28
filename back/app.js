@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-const testRouter = require("./routes/example")
+const testRouter = require("./routes/nodemongoose")
 
 app.use("/test" , testRouter);
 
