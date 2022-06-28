@@ -21,7 +21,7 @@ const student = new mongoose.Schema({name: String})
 //make new object using the student schema into 'newapple' collection
 const Student = mongoose.model('newapple', student)
 
-
+//router /addexample uses .save and add data {name : mingyu} to the 'newapple' document
 router.get('/addexample', (req,res) => {
   const small = new Student({ name: 'mingyu' });
   small.save(function (err) {
@@ -29,7 +29,7 @@ router.get('/addexample', (req,res) => {
   });
 })
 
-
+//router /showexcample uses .find and prints out all the data inside 'newapple' document
 router.get('/showexample', (req,res) => {
   Student.find({}, function(err,student){ 
     console.log(student)
