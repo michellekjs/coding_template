@@ -31,8 +31,9 @@ router.get('/addexample', (req,res) => {
 
 //router /showexcample uses .find and prints out all the data inside 'newapple' document
 router.get('/showexample', (req,res) => {
+  console.log(res)
   Student.find({}, function(err,student){ 
-    console.log(student)
+    res.send(student)
    });
 })
 
