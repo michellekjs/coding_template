@@ -1,7 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
+
+import CustomModal from './components/modal.js'
+
+const style= {
+  dbButton : {
+    border: 'none',
+    borderRadius: '20px',
+    width: '200px',
+    height : '80px',
+  },
+  pageStyle: {
+    margin:'40px',
+    fontFamily: 'Open Sans',
+  }
+};
 
 function App() {
 //get information using the router - written in back/routes/nodedb.js
@@ -17,19 +31,13 @@ function App() {
   }, [])
   
   return (
-    <div className="App">
-        <button onClick={()=> setVisible(!visible)}>Click here </button>
+    <div style={style.pageStyle}>
+      <h1> Template Components </h1>
+      <div>
+        <button style={style.dbButton} onClick={()=> setVisible(!visible)}>DB data display </button>
         {visible && <div> {data} </div>}
-{/* 
-  practicing frontend components
-    1. Modal
-    2. Toggle button
-    3. Responsive Screen
-    4. Map function 
-    5. Using Components made in other file
-    6. Styling - flex containers */}
-    
-
+        <div> <CustomModal/> </div>
+      </div>
     </div>
 
   );
