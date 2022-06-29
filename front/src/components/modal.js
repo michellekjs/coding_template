@@ -12,15 +12,10 @@ const customStyles = {
 
 
 const CustomModal = () => {
-  let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
     setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    subtitle.style.color = '#000';
   }
 
   function closeModal() {
@@ -34,11 +29,10 @@ const CustomModal = () => {
       </button>
       <Modal
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <h2>Hello</h2>
         <button style={customStyles.buttonStyle} onClick={closeModal}>close</button>
       </Modal>
     </div>

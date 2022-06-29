@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 
 import CustomModal from './components/modal.js'
+import Toggle from './components/toggle.js'
 
 const style= {
   dbButton : {
@@ -32,12 +33,24 @@ function App() {
   
   return (
     <div style={style.pageStyle}>
+      {/* title */}
       <h1> Template Components </h1>
+
+      {/* getting data from db */}
       <div>
-        <button style={style.dbButton} onClick={()=> setVisible(!visible)}>DB data display </button>
+        <button 
+          style={style.dbButton}
+          onClick={()=> setVisible(!visible)}>
+            DB data display
+        </button>
         {visible && <div> {data} </div>}
-        <div> <CustomModal/> </div>
       </div>
+
+      {/* custom modal component */}
+        <div> <CustomModal/> </div>
+
+      {/* custom toggle component */}
+        <div> <Toggle/> </div>
     </div>
 
   );
