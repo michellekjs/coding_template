@@ -6,7 +6,8 @@ const customStyles = {
     border: 'none',
     borderRadius: '20px',
     width: '200px',
-    height : '80px'
+    height : '80px',
+    marginBottom : '20px'
   }
 };
 
