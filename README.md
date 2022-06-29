@@ -6,7 +6,8 @@
 3. reactjs
 
 ## Front folder
-
+### front/src/App.js
+Practicing front and back connection & some complex frontend rendering 
 ## Back folder
 ### back/routes/index.js
 This is template code for using ***router.get*** .
